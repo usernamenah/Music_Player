@@ -85,7 +85,7 @@ const MusicPlayer = () => {
   return (
     <div className="music-player-container">
       <h2>YouTube Audio Player</h2>
-      <p>note : makesurethe link is not a mix / playlist</p>
+      <p>note : make sure the link is not a mix / playlist</p>
 
       <input
         type="text"
