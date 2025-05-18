@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  background: #121212;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.tabs {
+  background: #1e1e1e;
   color: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 960px; /* Increased for larger desktop */
+  margin: 40px auto;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+.tab-buttons {
+  display: flex;
+  border-bottom: 1px solid #333;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.tab-buttons button {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 12px 0;
+  font-size: 16px;
+  color: #aaa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-buttons button.active {
+  color: #fff;
+  border-color: #00bcd4;
+  font-weight: bold;
+}
+
+.tab-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+
+.tab-content.active {
+  opacity: 1;
+  max-height: 1000px;
+  margin-top: 20px;
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 600px) {
+  .tabs {
+    border-radius: 0;
+    margin: 0;
+    padding: 16px 12px;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .tab-buttons button {
+    font-size: 14px;
+    padding: 10px 0;
   }
 }

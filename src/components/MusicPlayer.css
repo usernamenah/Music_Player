@@ -1,0 +1,116 @@
+/* MusicPlayer.css */
+
+.music-player-container {
+  background: #121212;
+  color: #ffffff;
+  padding: 30px 20px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 420px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.music-player-container h2 {
+  margin-bottom: 15px;
+  color: #f5f5f5;
+  font-size: 1.5rem;
+}
+
+.music-player-input,
+.music-player-next-input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.music-player-button {
+  padding: 12px 24px;
+  background: #2d88ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background 0.3s;
+  width: 100%;
+  max-width: 200px;
+}
+
+.music-player-button:hover:not(:disabled) {
+  background: #1f6fe4;
+}
+
+.music-player-button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+.music-player-progress {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #ccc;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.music-player-slider {
+  flex: 1;
+  min-width: 100px;
+  margin: 0 10px;
+  accent-color: #2d88ff;
+}
+
+.music-player-queue-section {
+  margin-top: 25px;
+}
+
+.music-player-queue-list {
+  margin-top: 15px;
+  text-align: left;
+  max-height: 160px;
+  overflow-y: auto;
+  background-color: #1a1a1a;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.music-player-queue-list ol {
+  padding-left: 20px;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .music-player-container {
+    padding: 20px 15px;
+  }
+
+  .music-player-button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .music-player-progress {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .music-player-slider {
+    margin: 10px 0;
+  }
+}
